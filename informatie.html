@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: arnevandoorslaer
-  Date: 7/6/18
-  Time: 6:08 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
@@ -17,7 +11,18 @@
 
 </head>
 <body>
-<%@ include file="header.jspf" %>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="kalender.html">Kalender</a></li>
+            <li><a href="informatie.html">Informatie</a></li>
+        </ul>
+    </nav>
+    <img class="logo" src="images/KLJlogo.png" alt="KLJ">
+    <img class="banner" src="images/Banner.jpg" alt="Foto van iedereen te samen.">
+</header>
 <main class="main_column">
     <article>
         <h2>Inschrijven</h2>
@@ -32,9 +37,9 @@
     <article>
         <h2>Hoe kan je ons bereiken?</h2>
         <p>Eerst en vooral kan je ons steeds via GSM of email bereiken. Deze gegevens kan men vinden op de pagina <a
-                href="Servlet?command=contact">contact</a>.</p>
+                href="contact.html">contact</a>.</p>
         <p>Verder nodigen we je graag uit om op Facebook onze pagina leuk te vinden: “KLJ Hakendover”. Hier vind je alle
-            informatie over <a href="Servlet?command=kalender">activiteiten</a>, foto’s, leuke weetjes, ... terug. Op die manier
+            informatie over <a href="kalender.html">activiteiten</a>, foto’s, leuke weetjes, ... terug. Op die manier
             hopen we een betere communicatie naar de ouders toe te garanderen.</p>
         <p>Dus mama’s en papa’s, wie nog geen Facebook heeft, wij raden ten zeerste aan een account aan te maken. Op die
             manier kan je ook de hopen foto’s van je zoon/dochter bekijken die wij tijdens het kamp en sommige
@@ -61,7 +66,9 @@
         </ul>
     </article>
 </main>
-<%@ include file="footer.jspf" %>
+<footer>
+    <a href="https://www.facebook.com/KLJHakendover"><img src="images/Facebooklogo.png" alt="Facebook"></a>
+    <a href="https://twitter.com/KLJHakendover"><img src="images/Twitterlogo.png" alt="Twitter"></a>
+</footer>
 </body>
 </html>
-
