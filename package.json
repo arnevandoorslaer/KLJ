@@ -14,8 +14,9 @@
   "files": [
     "dist"
   ],
+  "heroku-run-build-script": true,
   "scripts": {
-    "start": "npm run start:watch",
+    "start": "http-server -p 4201 --gzip --brotli --proxy 'http://localhost:4201?' dist/",
     "start:watch": "vite serve --config vite.config.ts",
     "build": "rimraf ./dist && vite build --config vite.config.ts && tsc"
   },
