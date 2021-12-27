@@ -1,0 +1,46 @@
+{
+  "name": "@digita-ai/klj",
+  "version": "0.1.0",
+  "license": "",
+  "main": "./dist/klj.umd.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/klj.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/klj.es.js",
+      "require": "./dist/klj.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "http-server -p 4201 --gzip --brotli --proxy 'http://localhost:4201?' dist/",
+    "start:watch": "vite serve --config vite.config.ts",
+    "build": "rimraf ./dist && vite build --config vite.config.ts && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnevandoorslaer/klj.git",
+    "directory": "packages/klj"
+  },
+  "dependencies": {
+    "@xstate/inspect": "^0.4.1",
+    "lit-element": "2.4.0",
+    "rimraf": "^3.0.2",
+    "rx-lit": "1.0.1",
+    "rxjs": "^7.4.0",
+    "shx": "^0.3.3",
+    "xstate": "^4.26.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.44",
+    "http-server": "^0.12.3",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.5.4",
+    "vite": "2.6.0"
+  },
+  "eslintIgnore": [
+    "vite.config.ts"
+  ]
+}
