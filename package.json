@@ -1,5 +1,5 @@
 {
-  "name": "@digita-ai/klj",
+  "name": "@arnevandoorslaer/klj",
   "version": "0.1.0",
   "license": "",
   "main": "./dist/klj.umd.js",
@@ -15,7 +15,7 @@
     "dist"
   ],
   "scripts": {
-    "start": "http-server -p 4201 --gzip --brotli --proxy 'http://localhost:4201?' dist/",
+    "start": "npm run start:watch",
     "start:watch": "vite serve --config vite.config.ts",
     "build": "rimraf ./dist && vite build --config vite.config.ts && tsc"
   },
