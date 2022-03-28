@@ -9,32 +9,6 @@ body {
     min-width: 320px;
 }
 
-/*ul*/
-
-header ul {
-    background: #E32C2A;
-    display: flex;
-    padding: 0;
-    list-style: none;
-
-}
-
-nav ul{
-    flex-direction: column;
-}
-
-header ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 0.5em;
-    text-decoration: none;
-}
-
-header ul li a:hover {
-    background: #9BBF52;
-}
-
 .current {
     background: #9BBF52;
 }
@@ -84,22 +58,7 @@ h2 {
 }
 
 /*footer*/
-footer {
-    width: 100%;
-    text-align: right;
-}
 
-footer img {
-    width: 4%;
-    min-width: 17px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
-}
-
-footer a {
-    padding-top: 10px;
-}
 
 /*slideshow*/
 @keyframes slidy {

@@ -21,13 +21,13 @@ export class HomeComponent extends RxLitElement {
           <h2>Sfeerbeelden</h2>
   
           <div class="slider">
-              <figure>
+              <!-- <figure>
                   <img src="images/slider/foto1.jpg" alt="slideshow">
                   <img src="images/slider/foto2.jpg" alt="slideshow">
                   <img src="images/slider/foto3.jpg" alt="slideshow">
                   <img src="images/slider/foto4.jpg" alt="slideshow">
                   <img src="images/slider/foto5.jpg" alt="slideshow">
-              </figure>
+              </figure> -->
           </div>
           <p>Als je een vraag hebt kan je ook zeker <a href="mailto:hoofdleiding@kljhakendover.be">een mailtje</a>
               sturen naar ons. Of een berichtje sturen via facebook.</p>
