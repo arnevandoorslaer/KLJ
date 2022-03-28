@@ -21,7 +21,7 @@ export default defineConfig( ({ command, mode }) => {
       return {
         root: 'lib',
         server: {
-          port: 4201,
+          port: 3000,
         },
         mode: 'development',
         define: envWithProcessPrefix,
@@ -34,7 +34,7 @@ export default defineConfig( ({ command, mode }) => {
             outDir: '../dist',
         },
         server: {
-          port: 4201,
+          port: 3000,
         },
         mode: 'production',
         define: envWithProcessPrefix,

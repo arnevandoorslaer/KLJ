@@ -1,15 +1,28 @@
 {
-  "compilerOptions": {
-    "baseUrl": "lib",
-    "outDir": "dist",
-    "target": "es2019",
-    "module": "es2020"
-  },
+  "compileOnSave": false,
+    "compilerOptions": {
+        "allowJs": true,
+        "declaration": true,
+        "downlevelIteration": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "sourceMap": true,
+        "strict": true,
+        "baseUrl": "lib",
+        "outDir": "dist",
+        "module": "es2020",
+        "target": "es2017"
+    },
   "files": [ "node_modules/vite/client.d.ts" ],
   "include": [ "lib" ],
   "exclude": [
     "**/*.spec.ts",
     "node_modules",
     "dist"
-  ],
+  ]
 }
