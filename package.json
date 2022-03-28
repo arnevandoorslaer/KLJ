@@ -1,0 +1,48 @@
+{
+  "name": "@arnevandoorslaer/klj",
+  "version": "0.1.0",
+  "license": "",
+  "main": "./dist/klj.umd.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/klj.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/klj.es.js",
+      "require": "./dist/klj.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "http-server -p 3000 --gzip --brotli dist/",
+    "start:watch": "vite serve",
+    "build": "rimraf ./dist && vite build --config vite.config.ts && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnevandoorslaer/klj.git",
+    "directory": "packages/klj"
+  },
+  "dependencies": {
+    "@xstate/inspect": "^0.4.1",
+    "rimraf": "^3.0.2",
+    "shx": "^0.3.3",
+    "lit-element": "^2.5.1",
+    "rx-lit": "1.0.1",
+    "rxjs": "^7.4.0",
+    "uuid": "^8.3.2",
+    "xstate": "^4.27.0",
+    "xstate-codegen": "0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.44",
+    "http-server": "^0.12.3",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.5.4",
+    "vite": "2.6.0"
+  },
+  "eslintIgnore": [
+    "vite.config.ts"
+  ]
+}

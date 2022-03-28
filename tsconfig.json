@@ -1,0 +1,38 @@
+{
+  "compileOnSave": false,
+    "compilerOptions": {
+        "allowJs": true,
+        //"allowUnreachableCode": true,
+        //"composite": true,
+        "declaration": true,
+        //"declarationMap": true,
+        "downlevelIteration": true,
+        //"emitDecoratorMetadata": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "importHelpers": true,
+        "moduleResolution": "node",
+        //"newLine": "LF",
+        "noFallthroughCasesInSwitch": true,
+        //"noImplicitOverride": true,
+        "noImplicitReturns": true,
+        //"noPropertyAccessFromIndexSignature": true,
+        //"noUncheckedIndexedAccess": true,
+        //"noUnusedLocals": true,
+        //"noUnusedParameters": true,
+        "sourceMap": true,
+        "strict": true,
+        "baseUrl": "lib",
+        "outDir": "dist",
+        "module": "es2020",
+        "target": "es2017"
+    },
+  "files": [ "node_modules/vite/client.d.ts" ],
+  "include": [ "lib" ],
+  "exclude": [
+    "**/*.spec.ts",
+    "node_modules",
+    "dist"
+  ]
+}
