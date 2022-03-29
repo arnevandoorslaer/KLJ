@@ -1,4 +1,4 @@
-import { html, CSSResult, TemplateResult, state, css } from 'lit-element';
+import { html, CSSResult, TemplateResult, internalProperty, css } from 'lit-element';
 import { RxLitElement } from 'rx-lit';
 import { createMachine, interpret, Interpreter, State, StateMachine } from 'xstate';
 import { from } from 'rxjs';
@@ -9,16 +9,18 @@ import { InfoComponent } from './features/info/info.component'
 import { FooterComponent } from './common/footer.component';
 import { HeaderComponent } from './common/header.component';
 import { AppContext } from './app.context';
-import { AppEvent } from './app.events';
+import { AppEvent, NavigateEvent } from './app.events';
 import { AppStateSchema, AppState, AppRootStates, AppFeatureStates } from './app.states';
 import { appMachine } from './app.machine';
 
 export class AppComponent extends RxLitElement {
 
+  
   private machine: StateMachine<AppContext, AppStateSchema, AppEvent, AppState>;
+
   private actor: Interpreter<AppContext, AppStateSchema, AppEvent, AppState>;
 
-  @state() state?: State<AppContext, AppEvent, AppStateSchema, AppState>;
+  @internalProperty() state?: State<AppContext, AppEvent, AppStateSchema, AppState>;
 
   constructor() {
 
@@ -42,7 +44,7 @@ export class AppComponent extends RxLitElement {
 
   render(): TemplateResult {
       return html`
-      <header-component></header-component>
+      <header-component @navigate="${this.onNavigate}"></header-component>
       <main>
       ${ 
           this.state?.matches({ [AppRootStates.FEATURE]: AppFeatureStates.HOME }) ? html`<home-page></home-page>` 
@@ -56,6 +58,10 @@ export class AppComponent extends RxLitElement {
       <footer-component></footer-component>
       `;
   }
+
+  onNavigate = (event: CustomEvent): void => {
+    this.actor.send(new NavigateEvent(event.detail.toUpperCase()));
+  };
 
   static get styles(): CSSResult[] {
 

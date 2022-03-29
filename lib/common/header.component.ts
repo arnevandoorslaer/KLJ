@@ -14,7 +14,7 @@ export class HeaderComponent extends RxLitElement {
           <ul>
             <li><a @click="${() => this.onButtonClick('home')}">Home</a></li>
             <li><a @click="${() => this.onButtonClick('contact')}">Contact</a></li>
-            <li><a @click="${() => this.onButtonClick('kalender')}">Kalender</a></li>
+            <li><a @click="${() => this.onButtonClick('calendar')}">Kalender</a></li>
             <li><a @click="${() => this.onButtonClick('info')}">Info</a></li>
           </ul>
         </nav>
@@ -24,8 +24,7 @@ export class HeaderComponent extends RxLitElement {
 
 
   onButtonClick = (page: string): void => {
-    console.log('Navigating to', page);
-    this.dispatchEvent(new CustomEvent(page));
+    this.dispatchEvent(new CustomEvent('navigate', {detail: page}));
   };
 
 
