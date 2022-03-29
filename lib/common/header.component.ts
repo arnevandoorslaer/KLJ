@@ -9,13 +9,19 @@ export class HeaderComponent extends RxLitElement {
   render(): TemplateResult {
       return html`
       <header>
-        <a class="logo"><img src="images/KLJlogo.png" alt="KLJ"></a>
-        <nav class="header-right">
+        <div>
+          <img class="banner" src="images/Banner.jpg">
+          <div>KLJ Hakendover</div>
+        </div>
+        <nav>
           <ul>
-            <li><a @click="${() => this.onButtonClick('home')}">Home</a></li>
-            <li><a @click="${() => this.onButtonClick('contact')}">Contact</a></li>
-            <li><a @click="${() => this.onButtonClick('calendar')}">Kalender</a></li>
-            <li><a @click="${() => this.onButtonClick('info')}">Info</a></li>
+            <li @click="${() => this.onButtonClick('home')}">Home</li>
+            /
+            <li @click="${() => this.onButtonClick('contact')}">Contact</li>
+            /
+            <li @click="${() => this.onButtonClick('calendar')}"> Kalender</li>
+            /
+            <li @click="${() => this.onButtonClick('info')}">Info</li>
           </ul>
         </nav>
       </header>
@@ -32,37 +38,58 @@ export class HeaderComponent extends RxLitElement {
 
     return [
       css`
-      header {
-        overflow: hidden;
-        background: lightgrey;
+        
+      header div {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+
+      header div div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      header div img {
+        width: 100%;
+        height: 12rem;
+        object-fit: cover;
       }
       
-      a {
-        float: left;
-        color: black;
-        padding: 12px;
-        text-decoration: none;
-        font-size: 25px; 
-        line-height: 25px;
-      }
-      
-      img {
+      .logo {
         font-size: 25px;
         size: 25px;
         width: 100px;
         font-weight: bold;
       }
+
+      li {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
       
-      a:hover {
-        color: #4CAF50;
+      li:hover {
+        color: #e32c2a;
+        cursor: pointer;
       }
 
       ul {
         display: flex;
-        padding: 0;
         list-style: none;
         flex-direction: row;
-        float:right;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 1rem 0;
+      }
+      
+      nav {
+        background: #e2e2e2;
       }
       `
     ];

@@ -45,16 +45,12 @@ export class AppComponent extends RxLitElement {
   render(): TemplateResult {
       return html`
       <header-component @navigate="${this.onNavigate}"></header-component>
-      <main>
       ${ 
           this.state?.matches({ [AppRootStates.FEATURE]: AppFeatureStates.HOME }) ? html`<home-page></home-page>` 
         : this.state?.matches({ [AppRootStates.FEATURE]: AppFeatureStates.CONTACT }) ? html`<contact-page></contact-page>`
         : this.state?.matches({ [AppRootStates.FEATURE]: AppFeatureStates.CALENDAR }) ? html`<calendar-page></calendar-page>` 
         : this.state?.matches({ [AppRootStates.FEATURE]: AppFeatureStates.INFO }) ? html`<info-page></info-page>` 
     : html``  }
-
-
-      </main>
       <footer-component></footer-component>
       `;
   }
@@ -67,8 +63,7 @@ export class AppComponent extends RxLitElement {
 
     return [
               css`
-             
-             
+        
               `
 
     ];

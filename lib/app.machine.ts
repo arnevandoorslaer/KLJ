@@ -65,7 +65,7 @@ export const appMachine: MachineConfig<AppContext, AppStateSchema, AppEvent> = {
         [AppFeatureStates.INFO]: {
           id: AppFeatureStates.INFO,
           entry: [
-            send(() => new NavigatedEvent(`/home`, `KLJ Hakendover - Info`)),
+            send(() => new NavigatedEvent(`/info`, `KLJ Hakendover - Info`)),
           ],
         },
 
