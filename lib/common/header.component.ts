@@ -38,6 +38,7 @@ export class HeaderComponent extends RxLitElement {
 
     return [
       css`
+
         
       header div {
         position: relative;
@@ -90,6 +91,7 @@ export class HeaderComponent extends RxLitElement {
       
       nav {
         background: #e2e2e2;
+        height: 50px
       }
       `
     ];
